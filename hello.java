@@ -1,13 +1,12 @@
 class hello {
-    static void testmethod(String name) {
-        System.out.println("Hello, " + name + " !");
+    public static void main(String[] args) {
+        System.out.println(sum_recursion(5, 10));
     }
 
-    public static void main(String[] args) {
-        String[] name = {"Alice", "Bob", "Carol"};
-        System.out.println(name.length);
-        for (int i = 0; i < name.length; i++) {
-            testmethod(name[i]);
+    static int sum_recursion(int number_star, int number_end) {
+        if (number_end > number_star) {
+            return number_end + sum_recursion(number_star, number_end - 1);
         }
+        return number_end;
     }
 }
