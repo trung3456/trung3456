@@ -1,8 +1,13 @@
-import java.util.Scanner;
-
 class hello {
+    static void testmethod(String name) {
+        System.out.println("Hello, " + name + " !");
+    }
+
     public static void main(String[] args) {
-        Scanner scanner = new Scanner(System.in);
-        System.out.println("Hello, World!");
+        String[] name = {"Alice", "Bob", "Carol"};
+        System.out.println(name.length);
+        for (int i = 0; i < name.length; i++) {
+            testmethod(name[i]);
+        }
     }
 }
