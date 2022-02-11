@@ -1,12 +1,13 @@
 class hello {
     public static void main(String[] args) {
-        System.out.println(sum_recursion(5, 10));
+        int a = dequy(5);
+        System.out.println(a);
     }
 
-    static int sum_recursion(int number_star, int number_end) {
-        if (number_end > number_star) {
-            return number_end + sum_recursion(number_star, number_end - 1);
+    static int dequy(int number) {
+        if (number == 1) {
+            return 1;
         }
-        return number_end;
+        return number * dequy(number - 1);
     }
 }
